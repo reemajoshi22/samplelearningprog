@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.example.learning.model.DatabaseModelTwo" table="databasemodelTwo">
+
+		<id name="id" type="java.lang.Integer">
+			<column name="id" unique="true" />
+		</id>
+		<one-to-one name="dbModel" class="com.example.learning.model.DatabaseModel"
+			property-ref="id">
+		</one-to-one>
+		<!-- <property name="dbModel" ></property> -->
+		<property name="location" type="string">
+			<column name="location" length="10" not-null="true" unique="true" />
+		</property>
+		<property name="pincode" type="java.lang.Integer">
+			<column name="pincode" length="20" not-null="true" unique="true" />
+		</property>
+	</class>
+</hibernate-mapping>

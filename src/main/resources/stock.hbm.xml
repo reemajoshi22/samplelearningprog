@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="oneToMany.Stock" table="stock">
+		<id name="stockId" type="java.lang.Integer" column="stockId">
+			<generator class="identity">
+			</generator>
+		</id>
+
+
+		<property name="stockCode" column="stockCode" type="string"
+			length="255"></property>
+		<property name="stockName" column="stockName" type="string"
+			length="255"></property>
+
+
+		<set name="stockDailyRecords" table="stockDailyRecord" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="stockId" not-null="true" />
+			</key>
+			<one-to-many class="oneToMany.StockDailyRecord" />
+		</set>
+	</class>
+</hibernate-mapping>

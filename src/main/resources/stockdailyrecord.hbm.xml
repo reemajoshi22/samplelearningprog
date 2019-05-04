@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+
+
+	<class name="oneToMany.StockDailyRecord" table="stockDailyRecord">
+		<id name="recordId" column="recordId" type="java.lang.Integer">
+		<generator class="identity" /></id>
+		<many-to-one name="stock" cascade="all" column="stockId"
+			class="oneToMany.Stock" fetch="select"></many-to-one>
+		<property name="priceOpen" column="priceOpen" type="java.lang.Float"></property>
+		<property name="priceClose" column="priceClose" type="java.lang.Float"></property>
+		<property name="priceChange" column="priceChange" type="java.lang.Float"></property>
+		<property name="volume" column="volume" type="java.lang.Long"></property>
+		<property name="date" column="Date" type="date"></property>
+	</class>
+</hibernate-mapping>

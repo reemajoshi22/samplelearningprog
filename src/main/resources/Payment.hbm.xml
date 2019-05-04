@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.hibernate.Payment" table="PAYMENT">
+		<id name="paymentId" column="pid" >
+		<!-- <generator class="hilo"></generator> -->
+		</id>
+		<discriminator column="dcolumn" type="string" length="5" /><!--  use discriminator when we are using one table per hierarchy
+		discriminator is needed to identify which class data is stored in db -->
+		<property name="amount" column="amt" />
+
+		<subclass name="com.hibernate.CreditCard" discriminator-value="CC">
+			<property name="CreditCardType" column="cctype" length="10" />
+		</subclass>
+
+		<subclass name="com.hibernate.Cheque" discriminator-value="cq">
+			<property name="ChequeType" column="cqtype" length="10" />
+		</subclass>
+
+	</class>
+</hibernate-mapping>
