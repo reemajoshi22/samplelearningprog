@@ -1,9 +1,9 @@
 package com.oopsConcepts;
 
-public class Dog extends Animal {
+public class Dog extends Animal1 {
 
 	public static void main(String[] args) {
-		Animal animal = new Dog();
+		Animal1 animal = new Dog();
 		animal.eat();
 		// to call bark as it is nit avail in animal ref we do downcast
 		Dog dog = (Dog) animal;
@@ -14,7 +14,7 @@ public class Dog extends Animal {
 		dog1.eat();
 		dog1.bark();
 		
-		Animal animal2=(Animal)dog1;
+		Animal1 animal2=(Animal1)dog1;
 		animal2.eat();
 	}
 
