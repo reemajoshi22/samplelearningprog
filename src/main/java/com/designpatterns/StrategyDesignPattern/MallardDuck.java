@@ -1,4 +1,5 @@
 package com.designpatterns.StrategyDesignPattern;
+
 // Duck Type
 public class MallardDuck extends Duck {
     public MallardDuck() {

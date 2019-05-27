@@ -1,6 +1,7 @@
 package com.designpatterns.StrategyDesignPattern;
+
 // duck type
-public class ModelDuck extends Duck{
+public class ModelDuck extends Duck {
 
     public ModelDuck() {
         flyBehaviour=new FlyNoWay();
