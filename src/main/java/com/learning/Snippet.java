@@ -1,3 +1,4 @@
+/*
 package com.learning;
 
 public class Snippet {
@@ -11,3 +12,4 @@ public class Snippet {
 	 System.out.println(s);
 }}
 
+*/

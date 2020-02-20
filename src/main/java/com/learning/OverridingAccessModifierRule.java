@@ -6,9 +6,11 @@ import java.sql.SQLException;
 
 class first{
     public void method(){
+
         System.out.println(" class first method");
     }
-    private void method1(){
+    private void method1()
+    {
         System.out.println(" class first private  method");
     }
 }

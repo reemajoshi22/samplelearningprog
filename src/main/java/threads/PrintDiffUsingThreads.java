@@ -1,7 +1,7 @@
 package threads;
 
 public class PrintDiffUsingThreads implements Runnable{
-	int i=0;
+	 int i=0;
 	public static void main(String[] args) {
 		PrintDiffUsingThreads diffUsingThreads=new PrintDiffUsingThreads();
 		Thread thread=new Thread(diffUsingThreads);

@@ -1,13 +1,14 @@
 package patterns;
 
 public class PrintCross {
-	static int n = 9;
+	static int n = 10;
 
 	public static void main(String[] args) {
 		PrintCross aBox = new PrintCross();
 		//aBox.printCross(n);
 		System.out.println("generic cross");
 		aBox.genericPrintCross(n);
+        aBox.printPattern(n);
 
 	}
 
@@ -69,6 +70,31 @@ public class PrintCross {
 					System.out.print(" ");
 			}
 			System.out.println();
+		}
+
+	}
+
+	static void printPattern(int lenghtOfPattern){
+		int rowIndex,columnIndex,counter;
+		for ( rowIndex = 0; rowIndex < lenghtOfPattern; rowIndex++) {
+			if (rowIndex == 0 || rowIndex == lenghtOfPattern - 1) {
+				for (columnIndex = 0; columnIndex < lenghtOfPattern; columnIndex++)
+					System.out.print(" * ");
+				System.out.println();
+			}
+			else {
+				counter = lenghtOfPattern - 1 - rowIndex;
+				for (columnIndex = 0; columnIndex < lenghtOfPattern; columnIndex++) {
+					if (columnIndex == 0 || columnIndex == lenghtOfPattern - 1)
+						System.out.print(" * ");
+					else if (columnIndex == rowIndex || columnIndex == counter)
+						System.out.print(" * ");
+					else
+						System.out.print("   ");
+				}
+				System.out.println();
+
+			}
 		}
 
 	}

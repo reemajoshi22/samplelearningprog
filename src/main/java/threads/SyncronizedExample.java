@@ -21,7 +21,7 @@ public class SyncronizedExample implements Runnable {
 			e.printStackTrace();
 		}*/
 
-		Thread thread2 = new Thread(example2);
+		Thread thread2 = new Thread(example);
 		thread2.setName("TWO");
 		thread2.start();
 		/*try {

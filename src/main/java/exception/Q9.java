@@ -1,3 +1,4 @@
+/*
 package exception;
 
 class Annoyance extends Exception {
@@ -19,3 +20,4 @@ public class Q9 {
 		}
 	}
 }
+*/

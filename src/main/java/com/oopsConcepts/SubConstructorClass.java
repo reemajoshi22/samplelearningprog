@@ -6,11 +6,12 @@ public class SubConstructorClass extends SuperConstructorClass {
 		System.out.println(" i am no arg constructor sub class ");
 	}
 	public SubConstructorClass(String string){
-		super("reema");
+		super(string);
 		
 	}
 
 	public static void main(String[] args) {
+
 		SubConstructorClass sub = new SubConstructorClass();
 	}
 

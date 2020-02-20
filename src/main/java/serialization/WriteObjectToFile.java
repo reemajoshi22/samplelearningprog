@@ -12,7 +12,7 @@ public class WriteObjectToFile {
 				"Serialization Example");
 		try {
 			FileOutputStream file = new FileOutputStream(new File(
-					"E:\\serialization.ser"));
+					"D:\\serialization.ser"));
 			ObjectOutputStream out = new ObjectOutputStream(file);
 			// Method for serialization of object
 			out.writeObject(demoSerialization);

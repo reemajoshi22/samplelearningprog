@@ -77,7 +77,7 @@ public class HashMapExample {
 		//System.out.println(map.put(obj2, 2));
 		try {
 			FileOutputStream file = new FileOutputStream(new File(
-					"E:\\serializationOfMap.ser"));
+					"D:\\serializationOfMap.ser"));
 			ObjectOutputStream out = new ObjectOutputStream(file);
 			// Method for serialization of object
 			out.writeObject(map);

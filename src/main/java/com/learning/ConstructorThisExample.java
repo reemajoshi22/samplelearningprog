@@ -12,6 +12,7 @@ class OneA{
 		
 	}
 	public void display() {
+
 		System.out.println("i am display of A");
 	}
 }
@@ -21,7 +22,8 @@ class OneB{
 	}
 
 	public void display() {
-		System.out.println("i am display of B");
+
+	    System.out.println("i am display of B");
 	}
 	
 }

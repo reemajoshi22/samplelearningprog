@@ -8,9 +8,11 @@ public class ConstructorChaining {
 	}
 
 	public void instanceMethod() {
+
 		System.out.println("base class insatnce method");
 	}
 	public  static void staticMethod() {
+
 		System.out.println("base class static method");
 	}
 
@@ -26,10 +28,12 @@ class ConstructorChainingChild extends ConstructorChaining {
 		staticMethod();
 	}
 	public void instanceMethod() {
-		System.out.println("child class insatnce method");
+
+	    System.out.println("child class insatnce method");
 	}
 	public  static void staticMethod() {
-		System.out.println("child class static method");
+
+	    System.out.println("child class static method");
 	}
 
 }

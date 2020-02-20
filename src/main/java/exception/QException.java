@@ -1,3 +1,4 @@
+/*
 package exception;
 
 public class QException extends Exception {
@@ -17,4 +18,4 @@ public class QException extends Exception {
 			System.out.println("f1 ");
 		}
 	}
-}
+}*/

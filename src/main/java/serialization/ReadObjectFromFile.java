@@ -10,7 +10,7 @@ public class ReadObjectFromFile {
 	public static void main(String[] args) throws FileNotFoundException {
 		try {
 			FileInputStream file = new FileInputStream(new File(
-					"E:\\serialization.ser"));
+					"D:\\serialization.ser"));
 			ObjectInputStream in = new ObjectInputStream(file);
 			// Method for deserialization of object
 			DemoSerialization object1 = (DemoSerialization) in.readObject();
